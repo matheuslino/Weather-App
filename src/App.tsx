@@ -5,13 +5,59 @@ Author: Matheus A. Lino
 Author URI: https://matheuslino.com.br
 */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
 
+const api = {
+  key: process.env.REACT_APP_API_KEY,
+  url: "https://api.openweathermap.org/data/2.5/"
+}
+
+const setHistory = (data: object) => {
+  let city = data.name + ', ' + data.sys.country
+  let cities = (localStorage.getItem('cities') != null) ? JSON.parse(localStorage.getItem('cities')) : Array()
+
+  if (cities.length == 3)
+    cities.shift()
+
+  cities.push(city)
+
+  localStorage.setItem('cities', JSON.stringify(cities))
+}
+
 function App(props) {
+
+  // States
+  const [query, setQuery] = useState('');
+  const [weather, setWeather] = useState({});
+
+  const dateBuilder = (d: any) => {
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let day = days[d.getDay()];
+    let date = d.getDate();
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+
+    return `${day} ${date} ${month} ${year}`
+  }
+
+  const search = (e: any) => {
+    if (e.key === "Enter" || e == "btn") {
+      fetch(`${api.url}weather?q=${query}&units=metric&APPID=${api.key}`)
+        .then(res => res.json())
+        .then(result => {
+          setWeather(result);
+          setHistory(result)
+          setQuery('');           // clean search bar
+          // console.log(result);
+        });
+    }
+  }
+
   return (
     <div className="App">
       <main className="main py-4">
@@ -31,10 +77,16 @@ function App(props) {
                 type="text"
                 className="searchBar w-100 py-2 text-center rounded-left"
                 placeholder="Find city ..."
+                onChange={e => setQuery(e.target.value)}
+                value={query}
+                onKeyPress={search}
               />
             </Col>
             <Col xs="3" md="1" className="pl-0">
-              <div className="searchField w-100 h-100 rounded-right">
+              <div
+                className="searchField w-100 h-100 rounded-right"
+                onClick={() => search("btn")}
+              >
                 <FontAwesomeIcon icon={faSearch} className="h-100" />
               </div>
             </Col>
@@ -47,25 +99,39 @@ function App(props) {
                 Information
               </span>
               <hr />
-              <div className="location-box">
-                <div className="location">
-                  Toronto, CA
+
+              {/* Show data */}
+              {(typeof weather.main != "undefined") ? (
+                <div>
+                  <div className="location-box">
+                    <div className="location">
+                      {weather.name}, {weather.sys.country}
+                    </div>
+                    <div className="date">
+                      {dateBuilder(new Date())}
+                    </div>
+                  </div>
+                  <div className="weather-info my-4">
+                    <div className="col-12 col-md-3 temp mb-3 mb-md-0 rounded mr-4">
+                      {weather.main.temp}°c
+                    </div>
+                    <div className="col-12 col-md-3  mb-4 moisture rounded">
+                      {weather.main.humidity}%
+                    </div>
+                    <div className="weather">
+                      {weather.weather[0].main}
+                      <br />
+                      <span className="text-default">
+                        ({weather.weather[0].description})
+                        </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="date">
-                  Monday 20 July 2020
-                </div>
-              </div>
-              <div className="weather-info my-4">
-                <div className="col-12 col-md-3 temp mb-3 mb-md-0 rounded mr-4">
-                  18ºC
-                </div>
-                <div className="col-12 col-md-3  mb-4 moisture rounded">
-                  5mm
-                </div>
-                <div className="weather">
-                  Sunny
-                </div>
-              </div>
+              ) : (
+                  <div className="text-default">
+                    Data not found! Please try again.
+                  </div>
+                )}
             </Col>
             <Col xs="12" md="3">
 
@@ -77,12 +143,19 @@ function App(props) {
                       Latest searches
                     </span>
                     <hr />
-                    <ul>
-                      <li>
-                        <FontAwesomeIcon icon={faChevronRight} className="h-100 text-light size0 mr-2" />
-                        <span>Item</span>
-                      </li>
-                    </ul>
+
+                    {(localStorage.getItem('cities') != null) ? (
+                      <ul>
+                        <li>
+                          <FontAwesomeIcon icon={faChevronRight} className="h-100 text-light size0 mr-2" />
+                          <span>-</span>
+                        </li>
+                      </ul>
+                    ) : (
+                        <div className="text-default">
+                          No history.
+                        </div>
+                      )}
                   </Col>
                 </Row>
               </section>
@@ -98,7 +171,7 @@ function App(props) {
                     <ul>
                       <li>
                         <FontAwesomeIcon icon={faChevronRight} className="h-100 text-light size0 mr-2" />
-                        <span>Item</span>
+                        <span>-</span>
                       </li>
                     </ul>
                   </Col>
