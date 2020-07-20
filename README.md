@@ -5,7 +5,6 @@
 Simple application applying the basic concepts about NodeJS and ReactJS, through a RESTful API. The App dinamically calls the endpoints, getting all data, such as temperature, country, humidity and all other information related.
 
 ### Developed with:
-* NodeJS
 * ReactJS
 * HTML5
 * CSS3
