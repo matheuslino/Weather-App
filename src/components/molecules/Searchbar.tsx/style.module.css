@@ -2,7 +2,6 @@
   width: fit-content;
   display: flex;
   align-items: center;
-  /* transform: scale(4) translate3d(10vw, 10vw, 0); */
 }
 .container input {
   padding: 0.3em 0.5em 0.3em 1.8em;
@@ -26,11 +25,8 @@
   color: var(--dark-gray);
   stroke: var(--dark-gray);
   stroke-width: 3rem;
-  opacity: 0.4;
   transition: 0.4s;
+  opacity: 0.4;
   z-index: 2;
   filter: drop-shadow(0.08rem 0.08rem 0.02rem rgba(50, 50, 70, 0.5));
-}
-
-.container:has(input:focus) .searchIcon {
 }

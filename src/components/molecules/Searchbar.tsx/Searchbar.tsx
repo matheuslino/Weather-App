@@ -7,7 +7,7 @@ const Searchbar = () => {
   const render = (
     <div className={styles.container}>
       <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.searchIcon} />
-      <input placeholder='Toronto' />
+      <input placeholder='toronto' />
     </div>
   )
   return render
