@@ -1,5 +1,5 @@
 footer {
-  color: var(--white);
+  color: rgba(var(--white), 1);
   text-shadow: var(--text-shadow);
 }
 footer a {
@@ -8,5 +8,5 @@ footer a {
 }
 footer a,
 footer a:hover {
-  color: var(--white);
+  color: rgba(var(--white), 1);
 }

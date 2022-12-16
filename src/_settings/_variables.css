@@ -1,8 +1,8 @@
 :root {
-  --black: #000505;
-  --white: #fefcfd;
-  --light-gray: #f7f9fc;
-  --dark-gray: rgb(10, 15, 15);
+  --black: 0, 5, 5;
+  --white: 254, 252, 253;
+  --light-gray: 247, 249, 252;
+  --dark-gray: 10, 15, 15;
   --text-shadow: 0.04rem 0.04rem 0.02rem rgba(50, 50, 70, 0.5);
   --box-shadow: 0.15rem 0.15rem rgba(0, 0, 0, 0.5);
 }

@@ -1,10 +1,12 @@
 import React from 'react'
-import { Container } from 'reactstrap'
-import styles from './styles.module.css'
+import Box from '../../atoms/Box/Box'
+import styles from './style.module.css'
 
 const SearchHistory = (props: any) => {
   const render = (
-    <Container className={props?.className}>SearchHistory</Container>
+    <Box className={`${styles.Searchbox} ${props?.className}`}>
+      SearchHistory
+    </Box>
   )
   return render
 }

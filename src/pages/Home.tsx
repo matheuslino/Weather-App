@@ -84,13 +84,13 @@ const Home = () => {
         <Col xs={12} md={8}>
           <Searchbar className={'w-100'} />
           <Details className={styles.Details} />
-          <Col xs={12} md={8}>
-            <SearchHistory className={styles.SearchHistory} />
-          </Col>
+        </Col>
+        <Col xs={12} md={4}>
+          <SearchHistory className={styles.SearchHistory} />
         </Col>
       </Row>
       <Row className='mt-4'>
-        <Col xs={12} md={4}>
+        <Col xs={12}>
           <Forecast className={styles.Forecast} />
         </Col>
       </Row>

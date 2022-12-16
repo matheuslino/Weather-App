@@ -1,0 +1,8 @@
+.Box {
+  min-width: 100%;
+  padding: 0.3em 1em;
+  color: rgba(var(--dark-gray), 1);
+  border-radius: 0.5em;
+  box-shadow: var(--box-shadow);
+  background-color: rgba(var(--light-gray), 0.4);
+}
