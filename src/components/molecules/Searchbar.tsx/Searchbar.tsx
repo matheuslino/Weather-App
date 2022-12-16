@@ -5,7 +5,7 @@ import styles from './style.module.css'
 
 const Searchbar = (props: any) => {
   const render = (
-    <div className={`${styles.container} ${props?.customClass}`}>
+    <div className={`${styles.container} ${props?.className}`}>
       <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.searchIcon} />
       <input placeholder='toronto' />
     </div>

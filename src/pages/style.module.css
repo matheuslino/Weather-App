@@ -1,5 +1,4 @@
-.Home {
-  min-height: 100vh;
+body {
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.3) 3%,
@@ -10,4 +9,8 @@
   background-position: center;
   background-size: cover;
   font-family: 'Courier New', Courier, monospace;
+}
+.Home {
+  min-height: 100vh;
+  max-width: 60em;
 }

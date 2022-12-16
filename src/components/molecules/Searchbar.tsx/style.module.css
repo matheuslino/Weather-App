@@ -1,9 +1,10 @@
 .container {
-  width: fit-content;
   display: flex;
   align-items: center;
+  width: fit-content;
 }
 .container input {
+  min-width: 100%;
   padding: 0.3em 0.5em 0.3em 1.8em;
   color: var(--dark-gray);
   border: none;

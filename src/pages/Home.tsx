@@ -3,7 +3,10 @@ import { Container, Row, Col } from 'reactstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
+import SearchHistory from '../components/organisms/SearchHistory/SearchHistory'
 import Searchbar from '../components/molecules/Searchbar.tsx/Searchbar'
+import Forecast from '../components/organisms/Forecast/Forecast'
+import Details from '../components/organisms/Details/Details'
 import Header from '../templates/Header/Header'
 import Footer from '../templates/Footer/Footer'
 import styles from './style.module.css'
@@ -73,13 +76,26 @@ const Home = () => {
   // }
 
   return (
-    <div className={`${styles.Home} d-flex flex-column justify-content-center`}>
-      <Container>
-        <Header />
-        <Searchbar />
-        <Footer />
-      </Container>
-    </div>
+    <Container
+      className={`${styles.Home} d-flex flex-column justify-content-center px-4`}
+    >
+      <Header />
+      <Row className='mt-4'>
+        <Col xs={12} md={8}>
+          <Searchbar className={'w-100'} />
+          <Details className={styles.Details} />
+          <Col xs={12} md={8}>
+            <SearchHistory className={styles.SearchHistory} />
+          </Col>
+        </Col>
+      </Row>
+      <Row className='mt-4'>
+        <Col xs={12} md={4}>
+          <Forecast className={styles.Forecast} />
+        </Col>
+      </Row>
+      <Footer />
+    </Container>
   )
 }
 
