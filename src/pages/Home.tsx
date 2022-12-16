@@ -58,20 +58,20 @@ const Home = () => {
     return `${day} ${date} ${month} ${year}`
   }
 
-  const search = (e: any) => {
-    if (e.key === 'Enter' || e == 'btn') {
-      fetch(`${api.url}weather?q=${query}&units=metric&APPID=${api.key}`)
-        .then((res) => res.json())
-        .then((result) => {
-          setWeather(result)
-          setHistory(result)
-          setQuery('') // clean search bar
-        })
-    }
-  }
+  // const search = (e: any) => {
+  //   if (e.key === 'Enter' || e == 'btn') {
+  //     fetch(`${api.url}weather?q=${query}&units=metric&APPID=${api.key}`)
+  //       .then((res) => res.json())
+  //       .then((result) => {
+  //         setWeather(result)
+  //         setHistory(result)
+  //         setQuery('') // clean search bar
+  //       })
+  //   }
+  // }
 
   return (
-    <div className={styles.Home}>
+    <div className={getStyles(styles, ['Home'])}>
       <footer className='d-flex flex-column align-items-center'>
         <hr className='w-75' />
         <div className='mt-3'>
