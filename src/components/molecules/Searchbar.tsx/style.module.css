@@ -1,0 +1,36 @@
+.container {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  /* transform: scale(4) translate3d(10vw, 10vw, 0); */
+}
+.container input {
+  padding: 0.3em 0.5em 0.3em 1.8em;
+  color: var(--dark-gray);
+  border: none;
+  border-radius: 1em;
+  box-shadow: var(--box-shadow);
+  text-shadow: var(--text-shadow);
+  background-color: var(--light-gray);
+  opacity: 0.4;
+  transition: 0.4s;
+}
+.container input:focus {
+  background-color: var(--white);
+  outline: solid 0.1rem var(--dark-gray);
+  opacity: 0.6;
+}
+.searchIcon {
+  position: absolute;
+  padding: 0 0.4em;
+  color: var(--dark-gray);
+  stroke: var(--dark-gray);
+  stroke-width: 3rem;
+  opacity: 0.4;
+  transition: 0.4s;
+  z-index: 2;
+  filter: drop-shadow(0.08rem 0.08rem 0.02rem rgba(50, 50, 70, 0.5));
+}
+
+.container:has(input:focus) .searchIcon {
+}

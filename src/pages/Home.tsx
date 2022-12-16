@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+
+import Searchbar from '../components/molecules/Searchbar.tsx/Searchbar'
+import Footer from '../templates/Footer/Footer'
 import styles from './style.module.css'
 
 const api = {
@@ -70,16 +73,8 @@ const Home = () => {
 
   return (
     <div className={styles.Home}>
-      <footer className={`d-flex flex-column align-items-center`}>
-        <hr className='w-75' />
-        <div className='mt-3'>
-          ©2020{' '}
-          <a href='https://linkedin.com/in/matheus-lino/' target='_blank'>
-            Matheus A. Lino
-          </a>{' '}
-          - All rights reserved.
-        </div>
-      </footer>
+      <Searchbar />
+      <Footer />
     </div>
   )
 }

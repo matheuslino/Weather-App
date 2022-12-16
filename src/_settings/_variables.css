@@ -1,7 +1,8 @@
 :root {
   --black: #000505;
   --white: #fefcfd;
-  --gray: #f7f9fc;
-  --text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
-  --box-shadow: 4px 6px rgba(0, 0, 0, 0.2);
+  --light-gray: #f7f9fc;
+  --dark-gray: rgb(10, 15, 15);
+  --text-shadow: 0.04rem 0.04rem 0.02rem rgba(50, 50, 70, 0.5);
+  --box-shadow: 0.15rem 0.15rem rgba(0, 0, 0, 0.5);
 }
