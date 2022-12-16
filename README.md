@@ -1,16 +1,16 @@
 # Weather API
->  Get information about the weather via OpenWeatherMap API.
+Get information about the weather via OpenWeatherMap API.
 
 ### About
-Simple application applying the basic concepts about NodeJS and ReactJS, through a RESTful API. The App dinamically calls the endpoints, getting all data, such as temperature, country, humidity and all other information related.
+Simple application demonstrating how to integrate Bootstrap classes, Reactstrap Components in a ReactJS project. The App dinamically calls the endpoints, getting all data, such as temperature, country, humidity and all other information related.
 
 ### Developed with:
+* TypeScript
+* Fetch API
 * ReactJS
 * HTML5
 * CSS3
-* TypeScript
 * Bootstrap (reactstrap)
-* Fetch API
 
 ### Screens
 <img src="src/assets/images/screens.png" width="800">
@@ -36,7 +36,7 @@ npm start
 ```
 
 ### Version
-> Release: `1.0.0`
+> Release: `2.0.0`
 
 ### License
 MIT License
