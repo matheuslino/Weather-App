@@ -3,7 +3,8 @@ import { Container, Row, Col } from 'reactstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-import './style.css'
+import { getStyles } from '../_settings/_functions'
+import styles from './style.module.css'
 
 const api = {
   key: process.env.REACT_APP_API_KEY,
@@ -70,7 +71,7 @@ const Home = () => {
   }
 
   return (
-    <div className='Home'>
+    <div className={styles.Home}>
       <footer className='d-flex flex-column align-items-center'>
         <hr className='w-75' />
         <div className='mt-3'>
