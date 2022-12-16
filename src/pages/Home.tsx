@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 import Searchbar from '../components/molecules/Searchbar.tsx/Searchbar'
+import Header from '../templates/Header/Header'
 import Footer from '../templates/Footer/Footer'
 import styles from './style.module.css'
 
@@ -72,9 +73,12 @@ const Home = () => {
   // }
 
   return (
-    <div className={styles.Home}>
-      <Searchbar />
-      <Footer />
+    <div className={`${styles.Home} d-flex flex-column justify-content-center`}>
+      <Container>
+        <Header />
+        <Searchbar />
+        <Footer />
+      </Container>
     </div>
   )
 }

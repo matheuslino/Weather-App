@@ -1,0 +1,5 @@
+header h1 {
+  color: var(--white);
+  text-shadow: var(--text-shadow);
+  font-weight: bold;
+}
