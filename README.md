@@ -1,24 +1,24 @@
 # Weather API
 Get information about the weather via OpenWeatherMap API.
 
-### About
-Simple application demonstrating how to integrate Bootstrap classes, Reactstrap Components in a ReactJS project. The App dinamically calls the endpoints, getting all data, such as temperature, country, humidity and all other information related.
+## About
+Simple application demonstrating how to integrate Reactstrap Components and Bootstrap classes in a ReactJS project. The App dynamically calls the endpoints, getting all data, such as temperature, country, humidity and all other information related.
 
-### Developed with:
+## Developed with:
 * TypeScript
 * Fetch API
 * ReactJS
 * HTML5
 * CSS3
-* Bootstrap (reactstrap)
+* Reactstrap/Bootstrap
 
-### Screens
+## Screens
 <img src="src/assets/images/screens.png" width="800">
 
-### Preview
+## Preview
 * **Download:** you can download the source-code and run it on your local machine, as long as you have a network connection.
 
-### Installation and how to use
+## Installation and how to use
 
 First clone the project.
 ```
