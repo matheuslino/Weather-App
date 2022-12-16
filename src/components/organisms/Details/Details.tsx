@@ -1,9 +1,11 @@
 import React from 'react'
-import { Container } from 'reactstrap'
-import styles from './styles.module.css'
+import Box from '../../atoms/Box/Box'
+import styles from './style.module.css'
 
 const Details = (props: any) => {
-  const render = <Container className={props?.className}>Details</Container>
+  const render = (
+    <Box className={`${styles.Details} ${props?.className}`}>Details</Box>
+  )
   return render
 }
 export default Details

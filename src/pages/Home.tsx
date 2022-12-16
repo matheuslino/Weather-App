@@ -80,16 +80,17 @@ const Home = () => {
       className={`${styles.Home} d-flex flex-column justify-content-center px-4`}
     >
       <Header />
-      <Row className='mt-4'>
+      <Searchbar className={'w-100 mb-3'} />
+
+      <Row className='mb-3 g-3'>
         <Col xs={12} md={8}>
-          <Searchbar className={'w-100'} />
           <Details className={styles.Details} />
         </Col>
-        <Col xs={12} md={4}>
+        <Col xs={12} md={4} className='d-none d-md-grid'>
           <SearchHistory className={styles.SearchHistory} />
         </Col>
       </Row>
-      <Row className='mt-4'>
+      <Row>
         <Col xs={12}>
           <Forecast className={styles.Forecast} />
         </Col>

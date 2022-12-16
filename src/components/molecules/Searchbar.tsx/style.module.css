@@ -17,11 +17,8 @@
   color: rgba(var(--white), 0.4);
   transition: 0.4s;
 }
-.container input:focus,
-.container input:focus::placeholder {
-  color: rgba(var(--dark-gray), 0.8);
-}
 .container input:focus {
+  color: rgba(var(--dark-gray), 0.8);
   background-color: rgba(var(--white), 0.6);
   outline: solid 0.2rem rgba(var(--dark-gray), 0.4);
 }
