@@ -10,25 +10,3 @@
   background-position: center;
   background-size: cover;
 }
-.searchBar::placeholder {
-  color: var(--black);
-  text-shadow: var(--text-shadow);
-  transition: 0.4s ease;
-}
-.searchBar:focus::placeholder {
-  font-weight: bold;
-  text-shadow: none;
-}
-
-footer {
-  color: var(--white);
-  text-shadow: var(--text-shadow);
-}
-footer a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.4s;
-}
-footer a:hover {
-  color: #fff;
-}

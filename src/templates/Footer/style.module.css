@@ -1,0 +1,12 @@
+footer {
+  color: var(--white);
+  text-shadow: var(--text-shadow);
+}
+footer a {
+  text-decoration: none;
+  transition: 0.4s;
+}
+footer a,
+footer a:hover {
+  color: var(--white);
+}
