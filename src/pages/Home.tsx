@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-
-import { getStyles } from '../_settings/_functions'
 import styles from './style.module.css'
 
 const api = {
@@ -71,8 +69,8 @@ const Home = () => {
   // }
 
   return (
-    <div className={getStyles(styles, ['Home'])}>
-      <footer className='d-flex flex-column align-items-center'>
+    <div className={styles.Home}>
+      <footer className={`d-flex flex-column align-items-center`}>
         <hr className='w-75' />
         <div className='mt-3'>
           ©2020{' '}
