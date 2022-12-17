@@ -4,7 +4,7 @@ import styles from './style.module.css'
 
 const Box = (props: any) => {
   const render = (
-    <Container className={`${styles.Box} ${props?.className}`}>
+    <Container className={`${styles.Box} ${props?.className} glassmorphism`}>
       {props?.children}
     </Container>
   )

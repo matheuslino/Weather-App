@@ -7,7 +7,7 @@ const Searchbar = (props: any) => {
   const render = (
     <div className={`${styles.container} ${props?.className}`}>
       <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.searchIcon} />
-      <input placeholder='toronto' />
+      <input placeholder='toronto' className='glassmorphism' />
     </div>
   )
   return render

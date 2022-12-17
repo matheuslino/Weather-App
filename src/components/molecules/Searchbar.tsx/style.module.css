@@ -8,14 +8,10 @@
   padding: 0.3em 0.5em 0.3em 1.8em;
   color: rgba(var(--white), 0.8);
   border: none;
-  border-radius: 1em;
-  box-shadow: var(--box-shadow);
-  background-color: rgba(var(--light-gray), 0.4);
   transition: 0.4s;
 }
 .container input::placeholder {
   color: rgba(var(--white), 0.4);
-  transition: 0.4s;
 }
 .container input:focus {
   color: rgba(var(--dark-gray), 0.8);
