@@ -1,3 +1,4 @@
 .Searchbox {
   min-height: min(20vh, 10em);
+  color: rgba(var(--white), 0.7);
 }
