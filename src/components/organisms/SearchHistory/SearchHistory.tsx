@@ -1,6 +1,6 @@
 import React from 'react'
 import Box from '../../atoms/Box/Box'
-import Title from '../../molecules/Title/Title'
+import Title from '../../atoms/Title/Title'
 import styles from './style.module.css'
 
 const SearchHistory = (props: any) => {

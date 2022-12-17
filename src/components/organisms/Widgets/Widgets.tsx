@@ -1,5 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
+import Title from '../../atoms/Title/Title'
 import Widget from '../../molecules/Widget/Widget'
 import styles from './style.module.css'
 
@@ -17,7 +18,9 @@ const Widgets = (props: any) => {
         'Pressure',
       ].map((item, key) => (
         <Col xs={3}>
-          <Widget className='w-100'>{item}</Widget>
+          <Widget className='w-100'>
+            <Title>{item}</Title>
+          </Widget>
         </Col>
       ))}
     </Row>
