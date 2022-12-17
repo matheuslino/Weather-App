@@ -1,11 +1,12 @@
 import React from 'react'
 import Box from '../../atoms/Box/Box'
+import Title from '../../molecules/Title/Title'
 import styles from './style.module.css'
 
 const SearchHistory = (props: any) => {
   const render = (
     <Box className={`${styles.Searchbox} ${props?.className}`}>
-      SearchHistory
+      <Title>Search History</Title>
     </Box>
   )
   return render
