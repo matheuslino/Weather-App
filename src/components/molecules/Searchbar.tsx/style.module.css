@@ -9,24 +9,23 @@
   color: rgba(var(--white), 0.8);
   border: none;
   transition: 0.4s;
+  outline: solid 0.2rem rgba(var(--dark-gray), 0.3);
 }
 .container input::placeholder {
   color: rgba(var(--white), 0.4);
 }
 .container input:focus {
-  color: rgba(var(--dark-gray), 0.8);
-  background-color: rgba(var(--white), 0.6);
-  outline: solid 0.2rem rgba(var(--dark-gray), 0.4);
+  filter: contrast(2);
 }
 .container:has(input:focus) .searchIcon {
-  color: rgba(var(--dark-gray), 0.4);
-  stroke: rgba(var(--dark-gray), 0.4);
+  color: rgba(var(--white), 0.3);
+  stroke: rgba(var(--white), 0.3);
 }
 .searchIcon {
   position: absolute;
   padding: 0 0.4em;
-  color: rgba(var(--white), 0.3);
-  stroke: rgba(var(--white), 0.3);
+  color: rgba(var(--dark-gray), 0.4);
+  stroke: rgba(var(--dark-gray), 0.4);
   stroke-width: 3rem;
   transition: 0.4s;
   z-index: 2;
