@@ -7,6 +7,7 @@ import SearchHistory from '../components/organisms/SearchHistory/SearchHistory'
 import Searchbar from '../components/molecules/Searchbar.tsx/Searchbar'
 import Forecast from '../components/organisms/Forecast/Forecast'
 import Details from '../components/organisms/Details/Details'
+import Widgets from '../components/organisms/Widgets/Widgets'
 import Header from '../templates/Header/Header'
 import Footer from '../templates/Footer/Footer'
 import styles from './style.module.css'
@@ -77,28 +78,30 @@ const Home = () => {
 
   return (
     <Container
-      className={`${styles.Home} d-flex flex-column justify-content-center px-4`}
+      className={`${styles.Home} d-flex flex-column justify-content-center px-4 py-2`}
     >
-      <Row>
-        <Col className='text-center'>
+      <Row className='align-items-center mb-2'>
+        <Col xs={12} md={4} className='text-center'>
           <Header />
         </Col>
+        <Col>
+          <Searchbar className={'w-100'} />
+        </Col>
       </Row>
-      <Row className='mt-2 mb-3'>
-        <Searchbar className={'w-100'} />
-      </Row>
-      <Row className='mb-3 g-3'>
-        <Col xs={12} md={4}></Col>
+      <Row className='g-2 mb-2'>
+        <Col xs={12} md={4} className='d-flex flex-column'>
+          <SearchHistory className={`${styles.SearchHistory} flex-grow-1`} />
+        </Col>
         <Col xs={12} md={8}>
           <Details className={styles.Details} />
         </Col>
       </Row>
-      <Row className='g-3'>
-        <Col xs={12} md={4}>
-          <SearchHistory className={styles.SearchHistory} />
+      <Row className='g-2'>
+        <Col xs={12} md={4} className='d-flex flex-column'>
+          <Forecast className={`${styles.Forecast} flex-grow-1`} />
         </Col>
         <Col xs={12} md={8}>
-          <Forecast className={styles.Forecast} />
+          <Widgets className={styles.Widgets} />
         </Col>
       </Row>
       <Footer />
