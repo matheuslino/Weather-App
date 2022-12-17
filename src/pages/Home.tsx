@@ -79,19 +79,25 @@ const Home = () => {
     <Container
       className={`${styles.Home} d-flex flex-column justify-content-center px-4`}
     >
-      <Header />
-      <Searchbar className={'w-100 mb-3'} />
-
+      <Row>
+        <Col className='text-center'>
+          <Header />
+        </Col>
+      </Row>
+      <Row className='mt-2 mb-3'>
+        <Searchbar className={'w-100'} />
+      </Row>
       <Row className='mb-3 g-3'>
+        <Col xs={12} md={4}></Col>
         <Col xs={12} md={8}>
           <Details className={styles.Details} />
         </Col>
-        <Col xs={12} md={4} className='d-none d-md-grid'>
+      </Row>
+      <Row className='g-3'>
+        <Col xs={12} md={4}>
           <SearchHistory className={styles.SearchHistory} />
         </Col>
-      </Row>
-      <Row>
-        <Col xs={12}>
+        <Col xs={12} md={8}>
           <Forecast className={styles.Forecast} />
         </Col>
       </Row>

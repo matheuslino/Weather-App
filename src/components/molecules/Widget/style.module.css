@@ -1,0 +1,9 @@
+.Widget {
+  min-width: 5em;
+  width: fit-content;
+  padding: 0.5em;
+  aspect-ratio: 1/1;
+}
+.Widget > div {
+  background-color: red;
+}
