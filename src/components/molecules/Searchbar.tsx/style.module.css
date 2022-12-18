@@ -21,7 +21,7 @@
   color: rgba(var(--white), 0.3);
   stroke: rgba(var(--white), 0.3);
 }
-.searchIcon {
+.container .searchIcon {
   position: absolute;
   padding: 0 0.4em;
   color: rgba(var(--dark-gray), 0.4);

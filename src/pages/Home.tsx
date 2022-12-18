@@ -89,18 +89,18 @@ const Home = () => {
         </Col>
       </Row>
       <Row className='g-2 mb-2'>
-        <Col xs={12} md={4} className='d-flex flex-column'>
-          <SearchHistory className={`${styles.SearchHistory} flex-grow-1`} />
+        <Col xs={12} md={4} className='d-flex'>
+          <SearchHistory className={styles.SearchHistory} />
         </Col>
-        <Col xs={12} md={8}>
+        <Col xs={12} md={8} className='d-flex'>
           <Details className={styles.Details} />
         </Col>
       </Row>
       <Row className='g-2'>
-        <Col xs={12} md={4} className='d-flex flex-column'>
-          <Forecast className={`${styles.Forecast} flex-grow-1`} />
+        <Col xs={12} md={4} className='d-flex'>
+          <Forecast className={styles.Forecast} />
         </Col>
-        <Col xs={12} md={8}>
+        <Col xs={12} md={8} className='d-flex'>
           <Widgets className={styles.Widgets} />
         </Col>
       </Row>

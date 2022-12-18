@@ -9,13 +9,27 @@ const SearchHistory = (props: any) => {
     return (
       <Container className='pt-2'>
         <ul>
-          <li>Toronto, ON</li>
-          <li>Mississauga, ON</li>
-          <li>Brampton, ON</li>
-          <li>Vancounver, BC</li>
-          <li>Montreal, QC</li>
-          <li>London, ON</li>
-          <li>-</li>
+          <li>
+            <a href='#'>Toronto, ON</a>
+          </li>
+          <li>
+            <a href='#'>Mississauga, ON</a>
+          </li>
+          <li>
+            <a href='#'>Brampton, ON</a>
+          </li>
+          <li>
+            <a href='#'>Vancounver, BC</a>
+          </li>
+          <li>
+            <a href='#'>Montreal, QC</a>
+          </li>
+          <li>
+            <a href='#'>London, ON</a>
+          </li>
+          <li>
+            <a>-</a>
+          </li>
         </ul>
       </Container>
     )

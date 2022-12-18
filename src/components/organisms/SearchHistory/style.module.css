@@ -1,4 +1,17 @@
 .Searchbox {
-  min-height: min(20vh, 10em);
+  color: rgba(var(--white), 0.7);
+}
+.Searchbox ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.Searchbox a::before {
+  content: '\203A  ';
+}
+.Searchbox a,
+.Searchbox a:hover {
+  text-decoration: none;
   color: rgba(var(--white), 0.7);
 }
